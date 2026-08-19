@@ -1,0 +1,10 @@
+# ssbot dependencies — install with ./install.sh or: pip install -r requirements.txt
+#
+# Deliberately NOT listed: `telegram` / `python-telegram-bot`.
+# parser.py calls the Telegram HTTP API directly with requests, so no Telegram
+# library is required. The PyPI package named `telegram` is an unrelated stub
+# that exports only `Telegram` — installing it is what caused
+# "ImportError: cannot import name 'Bot' from 'telegram'".
+
+requests>=2.31,<3
+beautifulsoup4>=4.12,<5
